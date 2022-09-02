@@ -26,10 +26,6 @@ let TestComponent = class TestComponent extends component_cjs_1.Component {
      * 定义一个其他ts组件类型的属性
      */
     test7Prop;
-    /**
-     * 定义一个ts资源类型的属性
-     */
-    test8Prop;
     Start() {
         console.log("TestComponent Start");
         console.log(this.gameObject);
@@ -39,7 +35,6 @@ let TestComponent = class TestComponent extends component_cjs_1.Component {
         console.log(this.test6Prop);
         console.log(this.test7Prop.testNumber);
         console.log(this.test7Prop.testPassword);
-        console.log(this.test8Prop.testProp1);
     }
 };
 __decorate([
@@ -60,9 +55,6 @@ __decorate([
 __decorate([
     (0, property_deco_cjs_1.Property)(csharp_1.Puerts.Component.TsComponent)
 ], TestComponent.prototype, "test7Prop", void 0);
-__decorate([
-    (0, property_deco_cjs_1.Property)(csharp_1.Puerts.Component.TsAsset)
-], TestComponent.prototype, "test8Prop", void 0);
 TestComponent = __decorate([
     (0, transporter_deco_cjs_1.Transporter)()
 ], TestComponent);

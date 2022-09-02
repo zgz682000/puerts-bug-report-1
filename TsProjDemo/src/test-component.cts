@@ -35,12 +35,6 @@ export default class TestComponent extends Component {
     @Property(Puerts.Component.TsComponent)
     test7Prop: TestComponent2;
 
-    /**
-     * 定义一个ts资源类型的属性
-     */
-    @Property(Puerts.Component.TsAsset)
-    test8Prop: TestAsset;
-
 
     Start(){
         console.log("TestComponent Start");
@@ -51,6 +45,5 @@ export default class TestComponent extends Component {
         console.log(this.test6Prop);
         console.log(this.test7Prop.testNumber);
         console.log(this.test7Prop.testPassword);
-        console.log(this.test8Prop.testProp1);
     }
 }

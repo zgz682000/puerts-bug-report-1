@@ -11,7 +11,7 @@ namespace Puerts.Component {
 
     public class TsComponent : MonoBehaviour, ITsTransporterHolder, ITsPropertyHolder {
 
-        
+        public int jsEnvIdx;
 
         public List<Property> properties;
 
@@ -45,7 +45,7 @@ namespace Puerts.Component {
             }
             var convertedProperties = this.ConvertPropertiesValue();
             convertedProperties.AddRange(InternalProperties);
-            _transporter = new TsTransporter(tsModulePath, convertedProperties);
+            _transporter = new TsTransporter(tsModulePath, convertedProperties, jsEnvIdx);
         }
 
         private void Awake() {

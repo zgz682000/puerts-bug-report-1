@@ -13,7 +13,7 @@ console.log("index running");
 
 let demoEntryObj = UnityEngine.GameObject.Find("DemoEntry");
 let demoEntry = demoEntryObj.GetComponent($typeof(DemoEntry)) as DemoEntry;
-let testPrefab = demoEntry.testPrefab;
+let testPrefab = demoEntry.testPrefab2;
 setInterval(()=>{
     UnityEngine.Object.Instantiate(testPrefab);
 }, 1000);

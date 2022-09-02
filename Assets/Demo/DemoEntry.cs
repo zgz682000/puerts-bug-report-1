@@ -11,6 +11,7 @@ public class DemoEntry : MonoBehaviour
     private JsEnv _jsEnv2;
     
     public GameObject testPrefab;
+    public GameObject testPrefab2;
 
     // Start is called before the first frame update
     async void Start()
@@ -19,7 +20,7 @@ public class DemoEntry : MonoBehaviour
         _jsEnv1.ExecuteModule("index");
         await Task.Delay(1000);
         _jsEnv2 = new JsEnv(new DefaultLoader(), -1);
-        _jsEnv2.ExecuteModule("index");
+        _jsEnv2.ExecuteModule("index2");
     }
 
     private void Update() {

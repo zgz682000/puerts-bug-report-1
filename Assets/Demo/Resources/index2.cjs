@@ -13,8 +13,8 @@ if (csharp_1.UnityEngine.Application.isEditor) {
 console.log("index running");
 let demoEntryObj = csharp_1.UnityEngine.GameObject.Find("DemoEntry");
 let demoEntry = demoEntryObj.GetComponent((0, puerts_1.$typeof)(csharp_1.DemoEntry));
-let testPrefab = demoEntry.testPrefab;
+let testPrefab = demoEntry.testPrefab2;
 setInterval(() => {
     csharp_1.UnityEngine.Object.Instantiate(testPrefab);
 }, 1000);
-//# sourceMappingURL=index.cjs.map
+//# sourceMappingURL=index2.cjs.map

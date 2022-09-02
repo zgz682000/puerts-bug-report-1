@@ -52,12 +52,14 @@ namespace Puerts.Component {
 
         private SerializedProperty _propertiesProp;
         private SerializedProperty _tsModulePathProp;
+        private SerializedProperty _jsEnvIdxProp;
         private List<Property> properties;
 
         void OnEnable()
         {
             ReloadJsEnv();
             _tsModulePathProp = serializedObject.FindProperty("tsModulePath");
+            _jsEnvIdxProp = serializedObject.FindProperty("jsEnvIdx");
             _propertiesProp = serializedObject.FindProperty("properties");
             _propIndexByName.Clear();
             for(var j = 0; j < _propertiesProp.arraySize; j++){
@@ -82,6 +84,12 @@ namespace Puerts.Component {
                 _tsModulePathProp.stringValue = EditorGUILayout.TextField(new GUIContent("Ts Module Path"), _tsModulePathProp.stringValue);
                 EditorGUILayout.EndHorizontal();
             }
+            if (_jsEnvIdxProp != null){
+                EditorGUILayout.BeginHorizontal();
+                _jsEnvIdxProp.intValue = EditorGUILayout.IntField(new GUIContent("Js Env Index"), _jsEnvIdxProp.intValue);
+                EditorGUILayout.EndHorizontal();
+            }
+
             if (_propertiesProp != null){
                 GUILayout.Space(10f);
                 if (properties != null){
